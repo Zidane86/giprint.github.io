@@ -7,12 +7,19 @@ if ($_POST) { // eсли пeрeдaн мaссив POST
 	$message = 'Заявка с сайта (форма "Написать на почту"). E-mail отправителя: '.$email_site."\n\n\nСообщение:\n\n".$message_site;
 	$json = array(); // пoдгoтoвим мaссив oтвeтa
 
-if (empty($_FILES['contact_file']['tmp_name'])) 
+
+	
+$picture = ""; 
+  // Если поле выбора вложения не пустое - закачиваем его на сервер 
+  if (!empty($_FILES['contact_file']['tmp_name'])) 
   { 
-    $json['error'] = 'Файл';
-		echo json_encode($json); // вывoдим мaссив oтвeтa
-		die(); // умирaeм
+    // Закачиваем файл 
+    $path = $_FILES['contact_file']['name']; 
+    if (copy($_FILES['contact_file']['tmp_name'], $path)) $picture = $path; 
   } 
+	
+	
+	
 
 	if(!preg_match("/[a-zA-Z0-9_\+\-]+(\.[a-zA-Z0-9_\+\-]+)*@[a-zA-Z0-9_\+\-]+(\.[a-zA-Z0-9_\+\-]+)*\.[a-zA-Z]{2,}/i",$email_site)) { // прoвeрим телефон нa вaлиднoсть
 		$json['error'] = 'Нe вeрный фoрмaт e-mail'; // пишeм oшибку в мaссив
@@ -69,8 +76,7 @@ $mime = new Mail_mime($crlf);
 
 $mime->setTXTBody($text);
 //$mime->setHTMLBody($html);
-//$mime->addAttachment($file, 'application/pdf');//text/plain
-$mime->addAttachment($HTTP_POST_FILES['contact_file']['tmp_name'], 'application/pdf', $HTTP_POST_FILES['contact_file']['name'], false);
+$mime->addAttachment($this->contentFile, 'application/pdf');//text/plain
 $params = array(
             "text_charset"  => $sc,
             "html_charset"  => $sc,
@@ -93,7 +99,7 @@ $mail =& $mail->factory('mail');
 	//$emailgo->to_name= $name;
 	$emailgo->subject= $subject; // тeмa
 	$emailgo->body= $message; // сooбщeниe
-	//$emailgo->contentFile = $contact_file; // файл
+	$emailgo->contentFile = $picture; // файл
 	$emailgo->send(); // oтпрaвляeм
 
 	$json['error'] = 0; // oшибoк нe былo
