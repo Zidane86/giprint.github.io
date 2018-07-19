@@ -15,7 +15,7 @@ $picture = "";
   { 
     // Закачиваем файл 
     $path = $_FILES['contact_file']['name']; 
-    if (copy($_FILES['contact_file']['tmp_name'], $path)) $picture = $path; 
+    $picture = $path; 
   } 
 	
 	
