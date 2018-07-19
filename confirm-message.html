@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  Удалить <meta name="robots" -->
+  <meta name="robots" content="noindex, nofollow" />
+  <!--  Удалить <meta name="robots" -->
+  <meta name="format-detection" content="telephone=no">
+  <title>Центральная типография | Сообщение принято</title>
+  <link rel="stylesheet" href="libraries/bootstrap4/css/bootstrap.css" />
+  <link rel="stylesheet" href="libraries/magnific-popup/dist/magnific-popup.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="libraries/DirectionAwareHoverEffect/css/style.css">
+  <link rel="stylesheet" href="libraries/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="libraries/royalslider/royalslider.css">
+  <link rel="stylesheet" href="libraries/royalslider/skins/universal/rs-universal.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css"> </head>
+
+<body>
+  <!-- begin Page Wrapper -->
+  <div class="page-wrapper">
+    <!-- begin Confirm Message -->
+    <section class="confirm-message">
+      <div class="confirm-message__content">
+        <h2 class="confirm-message__title">Ваш запрос принят</h2>
+        <p class="confirm-message__text">Мы свяжемся с Вами в ближайшее время.</p>
+        <p class="confirm-message__text">
+          <span class="confirm-message__contacts">Ваш личный менеджер - Ирина Медведева:</span>
+          <span class="confirm-message__contacts">
+            <a href="tel:+79030021270" class="confirm-message__link">+7 (903) 002-12-70</a>,
+            <a href="mailto:113@giprint.ru" class="confirm-message__link">113@giprint.ru</a>
+          </span>
+        </p>
+      </div>
+    </section>
+    <!-- end Confirm Message -->
+  </div>
+  <!-- end Page Wrapper -->
+  <!-- begin Modals
+  =========================================================================== -->
+  <!-- begin Send Self Modal -->
+  <div class="send-self-modal modal fade" id="send-self-modal" tabindex="-1" role="dialog" aria-labelledby="send-self-modal__title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="send-self-modal__title">Отправить себе на почту</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="modal-section">
+              <label class="input-label">
+                <span class="input-label__title">Ваш email</span>
+                <input type="text" name="name" class="input" placeholder="Введите email"> </label>
+            </div>
+            <div class="row">
+              <div class="col-xl-6"> </div>
+              <div class="col-xl-6">
+                <button type="submit" class="modal-btn btn-dark-blue">Отправить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Send Self Modal -->
+  <!-- begin Postpress Processing Modal -->
+  <div class="postpress-processing-modal modal fade" id="postpress-processing-modal" tabindex="-1" role="dialog" aria-labelledby="postpress-processing-modal__title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="postpress-processing-modal__title">Заказать послепечатную обработку</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="row">
+              <div class="modal-col col-xl-5 col-lg-5 col-md-5 col-sm-5">
+                <h6 class="modal-block-title">Тип обработки:</h6>
+                <select name="type-of-processing" class="hide">
+                  <option value="folding" selected>Фальцовка</option>
+                  <option value="rounding-corners">Скругление углов</option>
+                  <option value="perforation">Перфорация</option>
+                  <option value="lamination">Ламинация</option>
+                </select>
+                <!-- begin Select Custom -->
+                <div class="select-custom">
+                  <a href="#" class="select-custom__dropdown-toggle">Фальцовка</a>
+                  <div class="select-custom__dropdown" style="display: none;">
+                    <ul class="select-custom__dropdown-items list-clear">
+                      <li class="select-custom__dropdown-item">
+                        <a href="#" class="select-custom__dropdown-item-link select-custom__dropdown-item-link_active">Фальцовка</a>
+                      </li>
+                      <li class="select-custom__dropdown-item">
+                        <a href="#" class="select-custom__dropdown-item-link">Скругление углов</a>
+                      </li>
+                      <li class="select-custom__dropdown-item">
+                        <a href="#" class="select-custom__dropdown-item-link">Перфорация</a>
+                      </li>
+                      <li class="select-custom__dropdown-item">
+                        <a href="#" class="select-custom__dropdown-item-link">Ламинация</a>
+                    </ul>
+                  </div>
+                </div>
+                <!-- end Select Custom -->
+              </div>
+              <div class="modal-col col-xl-7 col-lg-7 col-md-7 col-sm-7"></div>
+            </div>
+            <div class="modal-section">
+              <label class="textarea-label">
+                <span class="textarea-label__title">Ваши пожелания по обработке</span>
+                <textarea name="message" class="textarea"></textarea>
+              </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваше имя</span>
+                <input type="text" name="name" class="input" placeholder="Введите имя"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш email</span>
+                <input type="text" name="name" class="input" placeholder="Введите email"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш номер телефона</span>
+                <input type="text" name="name" class="input" placeholder="Введите номер телефона"> </label>
+            </div>
+            <div class="row">
+              <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 modal-col-center">
+                <div class="add-file">
+                  <button type="button" class="add-file__btn fontello"></button>
+                  <label for="postpress-processing-modal__file" class="add-file__label"> Загрузить файл</label>
+                  <input id="postpress-processing-modal__file" type="file" name="contact-file" class="add-file__input"> </div>
+              </div>
+              <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 modal-col-center">
+                <button type="submit" class="modal-btn btn-dark-blue">Заказать обработку</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Postpress Processing Modal -->
+  <!-- begin Add Review Modal -->
+  <div class="add-review-modal modal fade" id="add-review-modal" tabindex="-1" role="dialog" aria-labelledby="add-review-modal__title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="add-review-modal__title">Отзыв о продукции</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="add-review-modal__form">
+            <div class="modal-section">
+              <label class="input-label">
+                <span class="input-label__title">Ваше имя</span>
+                <input type="text" name="name" class="input" placeholder="Введите имя"> </label>
+              <label class="textarea-label">
+                <span class="textarea-label__title">Текст отзыва</span>
+                <textarea name="message" class="textarea"></textarea>
+              </label>
+            </div>
+            <div class="row">
+              <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 modal-col-center">
+                <div class="add-file">
+                  <button type="button" class="add-file__btn add-file__btn_photo fontello"></button>
+                  <label for="add-review__file" class="add-file__label">Загрузить фото</label>
+                  <input id="add-review__file" type="file" name="contact-file" class="add-file__input"> </div>
+              </div>
+              <div class="col-xl-7 col-lg-7 col-md-6 col-sm-6 modal-col-center">
+                <button type="submit" class="modal-btn btn-dark-blue">Отправить отзыв</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Add Review Modal -->
+  <!-- begin Order-Confirm Modal -->
+  <div class="order-cup-confirm-modal modal fade" id="order-cup-confirm-modal" tabindex="-1" role="dialog" aria-labelledby="order-cup-confirm-modal__title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="order-cup-confirm-modal__title">Заказать</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="order-cup-confirm-modal__form">
+            <div class="modal-section">
+              <label class="input-label">
+                <span class="input-label__title">Ваше имя</span>
+                <input type="text" name="name" class="input" placeholder="Введите имя"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш номер телефона</span>
+                <input type="text" name="phone-number" class="input" placeholder="Введите номер телефона"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш email</span>
+                <input type="text" name="email" class="input" placeholder="Введите email"> </label>
+              <label class="textarea-label">
+                <span class="textarea-label__title">Ваш комментарий к заказу (не обязательно)</span>
+                <textarea name="message" class="textarea"></textarea>
+              </label>
+            </div>
+            <div class="modal-section">
+              <div class="row">
+                <div class="modal-col col-xl-5 col-lg-5 col-md-5 col-sm-5">
+                  <h6 class="modal-block-title">Тираж (шт):</h6>
+                  <select name="cup-print-run" class="hide">
+                    <option value="5000">5 000</option>
+                    <option value="10000">10 000</option>
+                    <option value="15000">15 000</option>
+                    <option value="20000">20 000</option>
+                    <option value="25000">25 000</option>
+                    <option value="30000">30 000</option>
+                    <option value="40000">40 000</option>
+                    <option value="50000">50 000</option>
+                    <option value="70000">70 000</option>
+                    <option value="100000">100 000</option>
+                  </select>
+                  <!-- begin Select Custom -->
+                  <div class="select-custom">
+                    <a href="#" class="select-custom__dropdown-toggle">5 000</a>
+                    <div class="select-custom__dropdown">
+                      <ul class="select-custom__dropdown-items list-clear">
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link select-custom__dropdown-item-link_active">5 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">10 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">15 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">20 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">25 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">30 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">40 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">50 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">70 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">100 000</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- end Select Custom -->
+                </div>
+              </div>
+              <div class="confirm-data">
+                <ul class="confirm-data__items list-clear">
+                  <li class="confirm-data__item">
+                    <h6 class="confirm-data__item-title">Объем, мл:</h6>
+                    <span class="confirm-data__item-value">350 мл</span>
+                  </li>
+                  <li class="confirm-data__item">
+                    <h6 class="confirm-data__item-title">Тип сакана:</h6>
+                    <span class="confirm-data__item-value">Двухслойные</span>
+                  </li>
+                  <li class="confirm-data__item">
+                    <h6 class="confirm-data__item-title">Дизайн для стакана:</h6>
+                    <span class="confirm-data__item-value">С дизайном на заказ</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="modal-col col-xl-6 col-lg-6 col-md-6 col-sm-6 modal-col-center">
+                <h6 class="modal-block-title color-blue">Стоимость печати:</h6>
+                <span class="modal-price">1500
+                  <span class="modal-price__currency">руб.</span>
+                </span>
+              </div>
+              <div class="modal-col col-xl-6 col-lg-6 col-md-6 col-sm-6 modal-col-center">
+                <div class="add-file">
+                  <button type="button" class="add-file__btn fontello"></button>
+                  <label for="order-cup-confirm-modal__file" class="add-file__label">Загрузить макет (если есть)</label>
+                  <input id="order-cup-confirm-modal__file" type="file" name="contact-file" class="add-file__input"> </div>
+              </div>
+            </div>
+            <button type="submit" class="modal-btn btn-dark-blue">Сделать заказ</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Order-Confirm Modal -->
+  <!-- begin Order-Confirm Modal -->
+  <div class="order-confirm-modal modal fade" id="order-confirm-modal" tabindex="-1" role="dialog" aria-labelledby="order-confirm-modal__title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="order-confirm-modal__title">Заказать</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="order-confirm-modal__form">
+            <div class="modal-section">
+              <label class="input-label">
+                <span class="input-label__title">Ваше имя</span>
+                <input type="text" name="name" class="input" placeholder="Введите имя"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш номер телефона</span>
+                <input type="text" name="phone-number" class="input" placeholder="Введите номер телефона"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш email</span>
+                <input type="text" name="email" class="input" placeholder="Введите email"> </label>
+              <label class="textarea-label">
+                <span class="textarea-label__title">Ваш комментарий к заказу (не обязательно)</span>
+                <textarea name="message" class="textarea"></textarea>
+              </label>
+            </div>
+            <div class="modal-section">
+              <div class="row">
+                <div class="modal-col col-xl-5 col-lg-5 col-md-5 col-sm-5">
+                  <h6 class="modal-block-title">Тираж (шт):</h6>
+                  <select name="print-run" class="hide">
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="500">500</option>
+                    <option value="1000">1 000</option>
+                    <option value="2000">2 000</option>
+                    <option value="5000">5 000</option>
+                    <option value="10000">10 000</option>
+                    <option value="20000">20 000</option>
+                    <option value="50000">50 000</option>
+                    <option value="100000">100 000</option>
+                  </select>
+                  <!-- begin Select Custom -->
+                  <div class="select-custom">
+                    <a href="#" class="select-custom__dropdown-toggle">50</a>
+                    <div class="select-custom__dropdown">
+                      <ul class="select-custom__dropdown-items list-clear">
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link select-custom__dropdown-item-link_active">50</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">100</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">200</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">500</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">1 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">2 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">5 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">10 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">20 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">50 000</a>
+                        </li>
+                        <li class="select-custom__dropdown-item">
+                          <a href="#" class="select-custom__dropdown-item-link">100 000</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- end Select Custom -->
+                </div>
+                <div class="modal-col col-xl-7 col-lg-7 col-md-7 col-sm-7">
+                  <h6 class="modal-block-title">Срок печати:</h6>
+                  <div class="modal-inline-radio">
+                    <div class="modal-inline-radio__item">
+                      <label class="radio-label">
+                        <input type="radio" name="printing-time" value="printing-time-3hours" class="radio" checked="checked">
+                        <span class="radio-text radio-text_no-border radio-text_red">3 часа</span>
+                      </label>
+                    </div>
+                    <div class="modal-inline-radio__item">
+                      <label class="radio-label">
+                        <input type="radio" name="printing-time" value="printing-time-2day" class="radio">
+                        <span class="radio-text radio-text_no-border radio-text_green">2 дня</span>
+                      </label>
+                    </div>
+                    <div class="modal-inline-radio__item">
+                      <label class="radio-label">
+                        <input type="radio" name="printing-time" value="printing-time-3day" class="radio">
+                        <span class="radio-text radio-text_no-border radio-text_blue ">3 дня</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="confirm-data">
+                <ul class="confirm-data__items list-clear">
+                  <li class="confirm-data__item">
+                    <h6 class="confirm-data__item-title">Размер:</h6>
+                    <span class="confirm-data__item-value">297х420 (А3)</span>
+                  </li>
+                  <li class="confirm-data__item">
+                    <h6 class="confirm-data__item-title">Тип бумаги:</h6>
+                    <span class="confirm-data__item-value">Мелованная (130 г/м²)</span>
+                  </li>
+                  <li class="confirm-data__item">
+                    <h6 class="confirm-data__item-title">Цветная печать:</h6>
+                    <span class="confirm-data__item-value">На 1-ой стороне</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="modal-col col-xl-6 col-lg-6 col-md-6 col-sm-6 modal-col-center">
+                <h6 class="modal-block-title color-blue">Стоимость печати:</h6>
+                <span class="modal-price">1500
+                  <span class="modal-price__currency">руб.</span>
+                </span>
+              </div>
+              <div class="modal-col col-xl-6 col-lg-6 col-md-6 col-sm-6 modal-col-center">
+                <div class="add-file">
+                  <button type="button" class="add-file__btn fontello"></button>
+                  <label for="order-confirm-modal__file" class="add-file__label">Загрузить макет (если есть)</label>
+                  <input id="order-confirm-modal__file" type="file" name="contact-file" class="add-file__input"> </div>
+              </div>
+            </div>
+            <button type="submit" class="modal-btn btn-dark-blue">Сделать заказ</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Order-Confirm Modal -->
+  <!-- begin Stock Subscribe Modal -->
+  <div class="stock-subscribe-modal modal fade" id="stock-subscribe-modal" tabindex="-1" role="dialog" aria-labelledby="stock-subscribe-modal__title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="stock-subscribe-modal__title">Подписаться на акции</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="stock-subscribe-modal__form">
+            <div class="modal-section">
+              <label class="input-label">
+                <span class="input-label__title">Ваше имя</span>
+                <input type="text" name="name" class="input" placeholder="Введите имя"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш email</span>
+                <input type="text" name="name" class="input" placeholder="Введите email"> </label>
+            </div>
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md- col-sm-6 col-4"> </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-8">
+                <button type="submit" class="modal-btn btn-dark-blue">Подписаться</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Stock Subscribe Modal -->
+  <!-- begin Order a design Modal -->
+  <div class="order-design-modal modal fade" id="order-design-modal" tabindex="-1" role="dialog" aria-labelledby="order-design-modal__title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="order-design-modal__title">Заказать дизайн</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="modal-section">
+              <label class="textarea-label">
+                <span class="textarea-label__title">Ваши пожелания по дизайну</span>
+                <textarea name="message" class="textarea"></textarea>
+              </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваше имя</span>
+                <input type="text" name="name" class="input" placeholder="Введите имя"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш email</span>
+                <input type="text" name="name" class="input" placeholder="Введите email"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш номер телефона</span>
+                <input type="text" name="name" class="input" placeholder="Введите номер телефона"> </label>
+            </div>
+            <div class="row">
+              <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 modal-col-center">
+                <div class="add-file">
+                  <button type="button" class="add-file__btn fontello"></button>
+                  <label for="order-design-modal__file" class="add-file__label"> Загрузить файл</label>
+                  <input id="order-design-modal__file" type="file" name="contact-file" class="add-file__input"> </div>
+              </div>
+              <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 modal-col-center">
+                <button type="submit" class="modal-btn btn-dark-blue">Заказать дизайн</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Order a design Modal -->
+  <!-- begin Map Modal -->
+  <div class="map-modal modal fade" id="map-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="yandex-map-modal" class="yandex-map-modal"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Map Modal -->
+  <!-- begin Layout online order Modal -->
+  <div class="layout-online-order-modal modal fade" id="layout-online-order-modal" tabindex="-1" role="dialog" aria-labelledby="layout-online-order-modal__title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="layout-online-order-modal__title">Заказ №1 от 08.12.2017 </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="modal-section">
+              <label class="textarea-label">
+                <span class="textarea-label__title">Комментарий к заказу</span>
+                <textarea name="message" class="textarea"></textarea>
+              </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваше имя</span>
+                <input type="text" name="name" class="input" placeholder="Введите имя"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш номер телефона</span>
+                <input type="text" name="name" class="input" placeholder="Введите номер телефона"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш email</span>
+                <input type="text" name="name" class="input" placeholder="Введите email"> </label>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-5 col-sm-5 modal-col-center"> </div>
+              <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 modal-col-center ml-auto">
+                <button type="submit" class="modal-btn btn-dark-blue">Оформить заказ</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Layout online order Modal -->
+  <!-- begin Write to mail Modal -->
+  <div class="write-to-mail-modal modal fade" id="write-to-mail-modal" tabindex="-1" role="dialog" aria-labelledby="write-to-mail-modal__title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="write-to-mail-modal__title">Написать на почту</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="modal-section">
+              <label class="textarea-label">
+                <span class="textarea-label__title">Ваше сообщение</span>
+                <textarea name="message" class="textarea"></textarea>
+              </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваше имя</span>
+                <input type="text" name="name" class="input" placeholder="Введите имя"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш номер телефона</span>
+                <input type="text" name="name" class="input" placeholder="Введите номер телефона"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваш email</span>
+                <input type="text" name="name" class="input" placeholder="Введите email"> </label>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-5 col-sm-5 modal-col-center">
+                <div class="add-file">
+                  <button type="button" class="add-file__btn fontello"></button>
+                  <label for="write-to-mail__file" class="add-file__label"> Загрузить файл</label>
+                  <input id="write-to-mail__file" type="file" name="contact-file" class="add-file__input"> </div>
+              </div>
+              <div class="col-xl-8 col-lg-8 col-md-7 col-sm-7 modal-col-center">
+                <button type="submit" class="modal-btn btn-dark-blue">Отправить сообщение</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Write to mail Modal -->
+  <!-- begin Call Me Modal -->
+  <div class="call-me-modal modal fade" id="call-me-modal" tabindex="-1" role="dialog" aria-labelledby="call-me-modal__title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="call-me-modal__title">Заказать звонок</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="call-me-modal__form">
+            <div class="modal-section">
+              <label class="input-label">
+                <span class="input-label__title">Ваш номер телефона</span>
+                <input type="text" name="name" class="input" placeholder="Введите номер телефона"> </label>
+              <label class="input-label">
+                <span class="input-label__title">Ваше имя</span>
+                <input type="text" name="name" class="input" placeholder="Введите имя"> </label>
+            </div>
+            <div class="row">
+              <div class="col-xl-6"> </div>
+              <div class="col-xl-6">
+                <button type="submit" class="modal-btn btn-dark-blue">Заказать звонок</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Call Me Modal -->
+  <!-- end Modals
+  =========================================================================== -->
+  <!-- begin Mobile Nav Right
+  =========================================================================== -->
+  <nav class="mobile-nav-right">
+    <ul class="mobile-nav-right__items list-clear">
+      <li class="mobile-nav-right__item">
+        <a href="#" class="mobile-nav-right__item-link">Макет онлайн</a>
+        <a href="#" class="mobile-nav-right__item-link">Акции</a>
+        <a href="#" class="mobile-nav-right__item-link">Технологии</a>
+        <a href="#" class="mobile-nav-right__item-link">Дизайн</a>
+        <a href="#" class="mobile-nav-right__item-link">О типографии</a>
+        <a href="#" class="mobile-nav-right__item-link">Оплата и доставка</a>
+        <a href="#" class="mobile-nav-right__item-link">Контакты</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- end Mobile Nav Right
+  =========================================================================== -->
+  <script src="libraries/jquery/jquery-3.3.1.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="libraries/bootstrap4/js/bootstrap.bundle.min.js"></script>
+  <script src="libraries/swiper/js/swiper.min.js"></script>
+  <script src="libraries/royalslider/jquery.royalslider.min.js"></script>
+  <script src="libraries/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+  <script src="libraries/DirectionAwareHoverEffect/js/jquery.hoverdir.js"></script>
+  <script src="libraries/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="libraries/mixitup/mixitup.min.js"></script>
+  <script src="libraries/mixitup/mixitup-multifilter.min.js"></script>
+  <script src="js/functions.js"></script>
+</body>
+
+</html>
